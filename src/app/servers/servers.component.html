@@ -10,7 +10,8 @@
     [(ngModel)]="serverName"
 >
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
-<p>Server Name: {{ serverName }}</p>
-<p>{{ serverCreationStatus }}</p>
+<!-- <p>Server Name: {{ serverName }}</p> -->
+<!-- <p>{{ serverCreationStatus }}</p> -->
+<p *ngIf="serverCreated">Server created. Server name: {{ serverName }} </p>
 <app-server></app-server>
 <app-server></app-server>
